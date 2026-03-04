@@ -263,40 +263,57 @@ document.addEventListener('DOMContentLoaded', () => {
     const generateId = () => Math.random().toString(36).substring(2, 12);
 
     if (checkoutForm) {
-        checkoutForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
+    checkoutForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-            const name = document.getElementById('donor-name').value;
-            const email = document.getElementById('donor-email').value;
-            const phone = document.getElementById('donor-phone').value;
-            const documentCPF = document.getElementById('donor-document').value;
-            const floatAmount = parseFloat(customInput ? customInput.value : 50) || 50;
+        const nome = document.getElementById('donor-name').value;
+        const cpf = document.getElementById('donor-document').value;
+        const valor = parseFloat(customInput ? customInput.value : 50) || 50;
 
-            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Gerando PIX...';
-            submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Gerando PIX...';
+        submitBtn.disabled = true;
 
-            const requestBody = {
-                identifier: generateId(),
-                amount: floatAmount,
-                client: { name, email, phone, document: documentCPF },
-                products: [{
-                    id: 'doacao_vakinha_mg_01',
-                    name: 'Doação Vakinha - Zona da Mata MG',
-                    quantity: 1,
-                    price: floatAmount
-                }]
-            };
+        try {
+            const response = await fetch('/.netlify/functions/criar-pix', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    valor,
+                    nome,
+                    cpf
+                })
+            });
 
-            try {
-                const response = await fetch('/api/sigilopay/gateway/pix/receive', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'x-public-key': 'economicoscortes054_zo28deer0mgbu7ve',
-                        'x-secret-key': '2ylypq0ooy7cx751vknfmfrv2eea2sds3e1whs1j4rxjk1rcm1o1nhx7zefjit7j'
-                    },
-                    body: JSON.stringify(requestBody)
-                });
+            const data = await response.json();
+
+            if (response.ok && data.qrCodeBase64) {
+
+                pixQrCode.src = data.qrCodeBase64.startsWith('data:image')
+                    ? data.qrCodeBase64
+                    : 'data:image/png;base64,' + data.qrCodeBase64;
+
+                pixCodeInput.value = data.copiaECola || '';
+
+                formContainer.style.display = 'none';
+                pixContainer.style.display = 'block';
+
+            } else {
+                alert('Erro ao gerar PIX');
+                console.error(data);
+            }
+
+        } catch (error) {
+            console.error(error);
+            alert('Erro ao contatar o servidor.');
+        } finally {
+            submitBtn.innerHTML = 'Gerar PIX';
+            submitBtn.disabled = false;
+        }
+    });
+}
+       
 
                 const data = await response.json();
 
@@ -509,3 +526,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
