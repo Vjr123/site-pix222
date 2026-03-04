@@ -1,0 +1,535 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vakinha - AJUDA HUMANITÁRIA | ZONA DA MATA - MG</title>
+    <meta name="description" content="As fortes chuvas que atingiram a Zona da Mata mineira deixaram milhares de famílias em situação de emergência. Ajude agora através do Vakinha.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="icon" href="images/qBnpV8N.webp" type="image/webp">
+</head>
+
+<body>
+    <!-- Header Vakinha Style -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/qBnpV8N.webp" alt="Vakinha" class="logo-img">
+            </div>
+            <nav class="nav-menu">
+                <div class="nav-dropdown">
+                    <a href="#">Como ajudar <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#">Descubra <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#">Como funciona <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+                </div>
+                <a href="#" class="nav-search"><i class="fa-solid fa-magnifying-glass"></i> Buscar</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn-minha-conta">Minha conta</a>
+                <button class="btn btn-vakinha" onclick="document.getElementById('donate-widget').scrollIntoView({behavior: 'smooth'})">
+                    Faz uma vaquinha!
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <main class="page-wrapper">
+        <div class="content-area">
+
+            <!-- LEFT COLUMN -->
+            <div class="left-column">
+                <!-- Carousel -->
+                <div class="campaign-image-wrap carousel-container">
+                    <div class="carousel-inner" id="hero-carousel">
+                        <img src="images/qfwCLw7.webp" alt="Tragédia Chuvas Zona da Mata MG" class="campaign-main-img">
+                        <img src="images/qfwLNdx.png" alt="Resgate em Minas Gerais" class="campaign-main-img">
+                    </div>
+                    <button class="carousel-btn prev" id="carousel-prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="carousel-btn next" id="carousel-next" aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
+                    <div class="carousel-dots" id="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <!-- Campaign breadcrumb -->
+                <div class="campaign-breadcrumb">
+                    TRAGÉDIAS / DESASTRES / ACIDENTES
+                </div>
+
+                <!-- Campaign Title -->
+                <h1 class="campaign-title">AJUDA HUMANITÁRIA | ZONA DA MATA - MG</h1>
+                <p class="campaign-id">ID: 5971177</p>
+
+                <p class="campaign-intro">
+                    As fortes chuvas que atingiram a Zona da Mata mineira deixaram milhares de famílias em situação de
+                    emergência. Os dados atuais contam cerca de 3.500 famílias desalojadas, 49 mortos e várias pessoas
+                    desaparecidas. Diante desse cenário, estamos <span class="see-more" id="see-more-toggle">ver
+                        tudo</span>
+                </p>
+
+                <!-- Donors avatars -->
+                <div class="donors-row" id="donors-row">
+                    <div class="donor-avatars">
+                        <div class="donor-avatar" style="background:var(--accent1)">A</div>
+                        <div class="donor-avatar" style="background:var(--accent2)">M</div>
+                        <div class="donor-avatar" style="background:var(--accent3)">J</div>
+                        <div class="donor-avatar" style="background:var(--accent4)">R</div>
+                        <div class="donor-avatar" style="background:var(--accent5)">C</div>
+                    </div>
+                    <a href="#" class="ver-todos-link">Ver eles</a>
+                </div>
+
+                <!-- Tabs -->
+                <div class="campaign-tabs">
+                    <button class="tab-btn active" data-tab="sobre">Sobre</button>
+                    <button class="tab-btn" data-tab="atualizacoes">Atualizações</button>
+                    <button class="tab-btn" data-tab="quem-ajudou">Quem ajudou</button>
+                    <button class="tab-btn" data-tab="vakinha-premiada">Vakinha Premiada</button>
+                    <button class="tab-btn" data-tab="selos">Selos recebido</button>
+                </div>
+
+                <!-- Tab Content: Sobre -->
+                <div class="tab-content active" id="tab-sobre">
+                    <div class="story-section">
+                        <p class="story-date"><strong>Vaquinha criada em:</strong> 26/02/2026</p>
+                        <p class="story-text">As fortes chuvas que atingiram a Zona da Mata mineira deixaram milhares de
+                            famílias em situação de emergência.</p>
+                        <p class="story-text">Os dados atuais contam cerca de <strong>3.500 famílias
+                                desalojadas</strong>, <strong>49 mortos</strong> e várias pessoas desaparecidas.</p>
+                        <p class="story-text">Diante desses cenário, estamos promovendo uma mobilização solidária para
+                            apoiar a atuação da <strong>Cruz Vermelha Brasileira que está atuando</strong> nas ações
+                            emergenciais.</p>
+                    </div>
+
+                    <!-- FAQ Accordion -->
+                    <div class="faq-section">
+                        <h3 class="faq-title">Tudo o que você precisa saber sobre o Vakinha</h3>
+
+                        <div class="accordion" id="accordion-1">
+                            <div class="accordion-header" onclick="toggleAccordion('accordion-1')">
+                                <span>Como ajudar Nikolas Ferreira?</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-body">
+                                <p>Você pode ajudar clicando no botão "Quero Ajudar" ao lado e escolhendo um valor de
+                                    doação. O pagamento é totalmente seguro e pode ser feito via PIX.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion" id="accordion-2">
+                            <div class="accordion-header" onclick="toggleAccordion('accordion-2')">
+                                <span>Quando a vaquinha foi criada?</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-body">
+                                <p>Esta vaquinha foi criada no dia 26/02/2026, logo após as primeiras notícias sobre a
+                                    tragédia que atingiu a Zona da Mata de Minas Gerais.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion" id="accordion-3">
+                            <div class="accordion-header" onclick="toggleAccordion('accordion-3')">
+                                <span>Qual a meta da vaquinha AJUDA HUMANITÁRIA | ZONA DA MATA - MG?</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-body">
+                                <p>A meta desta vaquinha é de R$ 6.000.000,00. Todo valor arrecadado será destinado à
+                                    Cruz Vermelha Brasileira para ações emergenciais na região.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion" id="accordion-4">
+                            <div class="accordion-header" onclick="toggleAccordion('accordion-4')">
+                                <span>Como posso ajudar via chave PIX?</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-body">
+                                <p>Você pode usar a chave PIX: <strong>5971177@vakinha.com.br</strong> diretamente no
+                                    app do seu banco para fazer a doação sem necessidade de cadastro.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion" id="accordion-5">
+                            <div class="accordion-header" onclick="toggleAccordion('accordion-5')">
+                                <span>Quanto a vaquinha já arrecadou?</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-body">
+                                <p>O valor arrecadado é atualizado em tempo real na página. Confira o painel ao lado
+                                    para ver o valor mais recente!</p>
+                            </div>
+                        </div>
+
+                        <div class="denunciar-link">
+                            <i class="fa-solid fa-flag"></i> Denunciar esta vaquinha
+                        </div>
+                        <p class="aviso-legal">AVISO LEGAL: O Vakinha não indica nem apoia nenhuma das ações relatadas
+                            no texto desta vaquinha. A responsabilidade é inteiramente do criador e a criação não
+                            representa nem a opinião da plataforma Vakinha.</p>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Quem Ajudou (Donations List) -->
+                <div class="tab-content" id="tab-quem-ajudou" style="display:none">
+                    <h3 class="section-sub-title">Últimas Doações</h3>
+                    <div class="donation-list" id="donation-list"></div>
+                    <div class="pagination" id="pagination-container"></div>
+                </div>
+
+                <!-- Other tabs content placeholder -->
+                <div class="tab-content" id="tab-atualizacoes" style="display:none">
+                    <div class="empty-tab">
+                        <i class="fa-solid fa-newspaper"></i>
+                        <p>Nenhuma atualização postada ainda.</p>
+                    </div>
+                </div>
+                <div class="tab-content" id="tab-vakinha-premiada" style="display:none">
+                    <div class="empty-tab">
+                        <i class="fa-solid fa-trophy"></i>
+                        <p>Esta vaquinha ainda não participou de premiações.</p>
+                    </div>
+                </div>
+                <div class="tab-content" id="tab-selos" style="display:none">
+                    <div class="empty-tab">
+                        <i class="fa-solid fa-certificate"></i>
+                        <p>Nenhum selo recebido ainda.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN / SIDEBAR -->
+            <div class="right-column">
+                <div class="donate-widget" id="donate-widget">
+                    <!-- Amount raised -->
+                    <div class="raised-section">
+                        <div class="arrecadado-label">Arrecadado</div>
+                        <div class="raised-amount" id="raised-amount">R$ 5.653.181,03</div>
+                        <div class="goal-amount">de R$ 6.000.000,00</div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" id="progress-bar" style="width: 94%"></div>
+                        </div>
+
+                        <div class="meta-stats">
+                            <div class="meta-stat">
+                                <i class="fa-solid fa-heart" style="color:#e74c3c"></i>
+                                <span>Corações Recebidos</span>
+                                <strong id="backers-hearts">64743</strong>
+                            </div>
+                            <div class="meta-stat">
+                                <i class="fa-solid fa-users" style="color:var(--primary)"></i>
+                                <span>Apoiadores</span>
+                                <strong id="backers-number">77506</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Donation buttons -->
+                    <button class="btn btn-quero-ajudar" id="open-checkout-btn">
+                        Quero Ajudar
+                    </button>
+                    <button class="btn btn-compartilhar" id="share-main-btn">
+                        <i class="fa-solid fa-share-nodes"></i> Compartilhar
+                    </button>
+
+                    <!-- Donation badge -->
+                    <div class="donacao-protegida-badge">
+                        <i class="fa-solid fa-shield-heart" style="color:var(--primary)"></i>
+                        DOAÇÃO PROTEGIDA
+                    </div>
+
+                    <!-- Campaign Creator -->
+                    <div class="last-donor" id="last-donor-box">
+                        <div class="donor-avatar-small" style="background:var(--accent3)">NF</div>
+                        <div class="last-donor-info">
+                            <strong>Nikolas Ferreira</strong>
+                            <span class="last-donor-time">Ativo(a) desde outubro/2019</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OTHER CAMPAIGNS SECTION -->
+        <section class="other-campaigns">
+            <h2 class="other-campaigns-title">Outras histórias também precisam de você!</h2>
+            <div class="campaigns-grid">
+                <a href="#" class="campaign-card-mini">
+                    <div class="campaign-card-img-wrap">
+                        <img src="images/qBoCP29.webp" alt="Campanha 1">
+                        <div class="card-heart"><i class="fa-solid fa-heart"></i></div>
+                    </div>
+                    <div class="campaign-card-body">
+                        <p class="campaign-card-title">Ajuda a Plena a pagar...</p>
+                        <p class="campaign-card-amount">R$ 8.012,98 <span>de 30 mil</span></p>
+                        <p class="campaign-card-supporters"><i class="fa-solid fa-heart" style="color:#e74c3c"></i> 161
+                            corações recebidos</p>
+                    </div>
+                </a>
+                <a href="#" class="campaign-card-mini">
+                    <div class="campaign-card-img-wrap">
+                        <img src="images/qBonQat.webp" alt="Campanha 2">
+                        <div class="card-heart"><i class="fa-solid fa-heart"></i></div>
+                    </div>
+                    <div class="campaign-card-body">
+                        <p class="campaign-card-title">Ajuda para fazer o moto...</p>
+                        <p class="campaign-card-amount" style="color:var(--primary)">R$ 4.088,00 <span>de 30 mil</span>
+                        </p>
+                        <p class="campaign-card-supporters"><i class="fa-solid fa-heart" style="color:#e74c3c"></i> 35
+                            corações recebidos</p>
+                    </div>
+                </a>
+                <a href="#" class="campaign-card-mini">
+                    <div class="campaign-card-img-wrap">
+                        <img src="images/qBoo2FS.webp" alt="Campanha 3">
+                        <div class="card-heart"><i class="fa-solid fa-heart"></i></div>
+                    </div>
+                    <div class="campaign-card-body">
+                        <p class="campaign-card-title">Minha família perdou...</p>
+                        <p class="campaign-card-amount">R$ 2.903,18 <span>de 30 mil</span></p>
+                        <p class="campaign-card-supporters"><i class="fa-solid fa-heart" style="color:#e74c3c"></i> 77
+                            corações recebidos</p>
+                    </div>
+                </a>
+                <a href="#" class="campaign-card-mini">
+                    <div class="campaign-card-img-wrap">
+                        <img src="images/qBoo1Pp.webp" alt="Campanha 4">
+                        <div class="card-heart"><i class="fa-solid fa-heart"></i></div>
+                    </div>
+                    <div class="campaign-card-body">
+                        <p class="campaign-card-title">Vaquinha Equipamento...</p>
+                        <p class="campaign-card-amount">R$ 3.540,00 <span>de 15 mil</span></p>
+                        <p class="campaign-card-supporters"><i class="fa-solid fa-heart" style="color:#e74c3c"></i> 15
+                            corações recebidos</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/qBnpV8N.webp" alt="Vakinha" style="height:36px;width:auto;">
+            </div>
+            <p>Um projeto dedicado a conectar pessoas de bom coração às necessidades urgentes de Minas Gerais.</p>
+            <p>� 2026 Vakinha. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal de Checkout -->
+    <div id="checkout-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">�</span>
+            <h2 class="modal-title">Finalizar Doação</h2>
+            <p class="modal-subtitle">Você está doando <strong id="modal-amount-display">R$ 50,00</strong></p>
+
+            <!-- Value Selection inside modal -->
+            <div class="modal-value-grid" id="modal-value-grid">
+                <p class="options-title">Escolha um valor:</p>
+                <div class="value-grid">
+                    <button class="value-btn" data-val="25">R$ 25</button>
+                    <button class="value-btn active" data-val="50">R$ 50</button>
+                    <button class="value-btn" data-val="100">R$ 100</button>
+                    <button class="value-btn" data-val="200">R$ 200</button>
+                    <button class="value-btn" data-val="500">R$ 500</button>
+                    <button class="value-btn" data-val="1000">R$ 1.000</button>
+                </div>
+                <div class="custom-value-container">
+                    <label for="custom-value">Ou outro valor:</label>
+                    <div class="input-wrapper">
+                        <span class="currency-symbol">R$</span>
+                        <input type="number" id="custom-value" value="50" min="5" step="5">
+                    </div>
+                </div>
+            </div>
+
+            <div id="checkout-form-container">
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label for="donor-name">Nome Completo</label>
+                        <input type="text" id="donor-name" required="" placeholder="Ex: João da Silva">
+                    </div>
+                    <div class="form-group">
+                        <label for="donor-email">E-mail</label>
+                        <input type="email" id="donor-email" required="" placeholder="Ex: joao@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="donor-document">CPF ou CNPJ</label>
+                        <input type="text" id="donor-document" required="" placeholder="Ex: 123.456.789-00">
+                    </div>
+                    <div class="form-group">
+                        <label for="donor-phone">Telefone / WhatsApp</label>
+                        <input type="text" id="donor-phone" required="" placeholder="Ex: (11) 99999-9999">
+                    </div>
+                    <button type="submit" class="btn btn-quero-ajudar w-100" id="generate-pix-btn">
+                        Gerar PIX <i class="fa-brands fa-pix"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div id="pix-payment-container" style="display: none; text-align: center;">
+                <h3>Escaneie o QR Code</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">Abra o app do seu banco e escaneie o código
+                    abaixo para finalizar sua doação.</p>
+                <img id="pix-qrcode" src="" alt="QR Code PIX" style="width: 230px; height: 230px; margin: 0 auto 1rem; display: block; border: 1px solid var(--border); border-radius: 8px;">
+
+                <div class="copypaste-container" style="margin-top: 1rem;">
+                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem; text-align: left; font-weight: 600;">Ou use o
+                        modo Copia e Cola:</p>
+                    <div style="display: flex;">
+                        <input type="text" id="pix-code-input" readonly="" style="flex: 1; padding: 0.75rem; border: 1px solid var(--border); border-radius: 6px 0 0 6px; font-size:0.85rem;">
+                        <button type="button" id="copy-pix-btn" class="btn btn-quero-ajudar" style="border-radius: 0 6px 6px 0; padding: 0.75rem 1rem;"><i class="fa-solid fa-copy"></i>
+                            Copiar</button>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; color: var(--primary); font-weight: 600;" id="waiting-payment">
+                    <i class="fa-solid fa-circle-notch fa-spin"></i> Aguardando pagamento...
+                </div>
+            </div>
+
+            <div id="success-payment-container" style="display: none; text-align: center; padding: 1rem 0;">
+                <i class="fa-solid fa-heart-circle-check" style="color: var(--primary); font-size: 4rem; margin-bottom: 1rem;"></i>
+                <h3 style="color: var(--primary); margin-bottom: 1rem;">Obrigado pela sua doação!</h3>
+                <p style="color: var(--text-main); font-size: 1.05rem; line-height: 1.6;">
+                    Sua contribuição é um raio de esperança para as famílias da Zona da Mata. Neste momento difícil, a
+                    solidariedade dos mineiros e de pessoas como você faz toda a diferença para recomeçar!
+                </p>
+                <button type="button" class="btn btn-quero-ajudar w-100" style="margin-top: 2rem;" id="finish-btn">Fechar e Voltar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div id="share-modal" class="modal-overlay">
+        <div class="modal-content" style="max-width:400px">
+            <span class="close-modal" id="close-share-modal">�</span>
+            <h2 class="modal-title">Compartilhar</h2>
+            <p class="modal-subtitle">Ajude a espalhar essa causa!</p>
+            <div class="share-buttons">
+                <button class="btn-share btn-whatsapp" id="share-whatsapp"><i class="fa-brands fa-whatsapp"></i>
+                    WhatsApp</button>
+                <button class="btn-share btn-facebook" id="share-facebook"><i class="fa-brands fa-facebook-f"></i>
+                    Facebook</button>
+                <button class="btn-share btn-twitter" id="share-twitter"><i class="fa-brands fa-twitter"></i>
+                    Twitter</button>
+                <button class="btn-share btn-copy" id="share-copy"><i class="fa-solid fa-link"></i> Copiar Link</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+
+
+    <div style="margin-top:20px; text-align:center;">
+        <input type="number" id="valorPix" placeholder="Digite o valor (ex: 50.00)" 
+        style="padding:10px; width:200px; margin-bottom:10px;" />
+        <br>
+        <button onclick="gerarPix()" style="padding:10px 20px; cursor:pointer;">
+            Quero Ajudar
+        </button>
+    </div>
+
+    <div id="pix-box" style="display:none; margin-top:15px; text-align:center;">
+        <h3>Escaneie o QR Code</h3>
+        <img id="pix-qrcode" width="200"/>
+        <p>Pix Copia e Cola:</p>
+        <textarea id="pix-code" rows="4" style="width:100%;"></textarea>
+    </div>
+
+    <script>
+    async function gerarPix() {
+        const valor = document.getElementById("valorPix").value;
+
+        if (!valor || valor <= 0) {
+            alert("Digite um valor válido.");
+            return;
+        }
+
+        const response = await fetch("/.netlify/functions/criar-pix", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ valor: parseFloat(valor) })
+        });
+
+        const data = await response.json();
+
+        if (data.qrCodeBase64) {
+            document.getElementById("pix-box").style.display = "block";
+            document.getElementById("pix-qrcode").src =
+                "data:image/png;base64," + data.qrCodeBase64;
+            document.getElementById("pix-code").value =
+                data.pixCopiaECola;
+        } else {
+            alert("Erro ao gerar Pix");
+        }
+    }
+    </script>
+    
+
+    <div style="margin-top:20px; text-align:center;">
+        <input type="text" id="nomePix" placeholder="Seu nome" 
+        style="padding:10px; width:250px; margin-bottom:10px;" /><br>
+
+        <input type="text" id="cpfPix" placeholder="Seu CPF (somente números)" 
+        style="padding:10px; width:250px; margin-bottom:10px;" /><br>
+
+        <input type="number" id="valorPix" placeholder="Digite o valor (ex: 50.00)" 
+        style="padding:10px; width:250px; margin-bottom:10px;" /><br>
+
+        <button onclick="gerarPix()" style="padding:10px 20px; cursor:pointer;">
+            Gerar Pix
+        </button>
+    </div>
+
+    <div id="pix-box" style="display:none; margin-top:15px; text-align:center;">
+        <h3>Escaneie o QR Code</h3>
+        <img id="pix-qrcode" width="200"/>
+        <p>Pix Copia e Cola:</p>
+        <textarea id="pix-code" rows="4" style="width:100%;"></textarea>
+    </div>
+
+    <script>
+    async function gerarPix() {
+        const nome = document.getElementById("nomePix").value;
+        const cpf = document.getElementById("cpfPix").value;
+        const valor = document.getElementById("valorPix").value;
+
+        if (!nome || !cpf || !valor) {
+            alert("Preencha todos os campos.");
+            return;
+        }
+
+        const response = await fetch("/.netlify/functions/criar-pix", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ 
+                valor: parseFloat(valor),
+                nome: nome,
+                cpf: cpf
+            })
+        });
+
+        const data = await response.json();
+
+        if (data.qrCodeBase64) {
+            document.getElementById("pix-box").style.display = "block";
+            document.getElementById("pix-qrcode").src =
+                data.qrCodeBase64;
+            document.getElementById("pix-code").value =
+                data.copiaECola;
+        } else {
+            alert("Erro ao gerar Pix");
+        }
+    }
+    </script>
+    
+</body></html>
