@@ -1,4 +1,12 @@
 exports.handler = async (event) => {
+
+  if (event.httpMethod !== "POST") {
+    return {
+      statusCode: 405,
+      body: JSON.stringify({ erro: "Método não permitido" })
+    };
+  }
+
   try {
     const { valor, nome, cpf } = JSON.parse(event.body);
 
@@ -26,13 +34,13 @@ exports.handler = async (event) => {
     return {
       statusCode: 200,
       body: JSON.stringify({
-        qrCodeBase64: data.data.qrCodeBase64,
-        copiaECola: data.data.copyPaste
+        qrCodeBase64: data.data?.qrCodeBase64,
+        copiaECola: data.data?.copyPaste
       })
     };
 
   } catch (error) {
-    console.log(error);
+    console.log("ERRO REAL:", error);
 
     return {
       statusCode: 500,
